@@ -33,6 +33,6 @@ jobs:
       with:
         cmd: install
     - name: Making Build folder
-      run: yarn build
+      run: CI=false yarn build
     - name: React App Deploy
       run: surge ./build Bootcamp2020-jamshed-red-Queen-race.surge.sh/ --token ${{secrets.SURGE_TOKEN}}
